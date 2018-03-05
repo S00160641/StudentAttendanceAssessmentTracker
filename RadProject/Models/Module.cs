@@ -17,6 +17,11 @@ namespace RadProject.Models
         [Display(Name = "Name")]
         public string Name { get; set; }
 
+        // Lecturer
+        [Display(Name = "Lecturer")]
+        [Key, ForeignKey("Lecturer"), Column(Order = 0)]
+        public int LecturerID { get; set; }
+
         // Students
         public virtual ICollection<Student> studentsInModule { get; set; }
     }
